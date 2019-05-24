@@ -1,0 +1,309 @@
+https://www.technologyreview.com/s/612561/a-radical-new-neural-network-design-could-overcome-big-challenges-in-ai/#
+
+The trajectories of neural ordinary differential equations.
+DAVID DUVENAUD ET AL.
+Intelligent Machines
+A radical new neural network design could overcome big challenges in AI
+Researchers borrowed equations from calculus to redesign the core machinery of deep learning so it can model continuous processes like changes in health.
+by Karen Hao  December 12, 2018
+ 
+David Duvenaud was collaborating on a project involving medical data when he ran up against a major shortcoming in AI.
+
+Recommended for You
+A quantum experiment suggests there’s no such thing as objective reality
+The mass shooting in New Zealand shows how broken social media is
+IBM’s photo-scraping scandal shows what a weird bubble AI researchers live in
+No, scientists didn’t just “reverse time” with a quantum computer
+Triton is the world’s most murderous malware, and it’s spreading
+An AI researcher at the University of Toronto, he wanted to build a deep-learning model that would predict a patient’s health over time. But data from medical records is kind of messy: throughout your life, you might visit the doctor at different times for different reasons, generating a smattering of measurements at arbitrary intervals. A traditional neural network struggles to handle this. Its design requires it to learn from data with clear stages of observation. Thus it is a poor tool for modeling continuous processes, especially ones that are measured irregularly over time.
+
+The challenge led Duvenaud and his collaborators at the university and the Vector Institute to redesign neural networks as we know them. Last week their paper was among four others crowned “best paper” at the Neural Information Processing Systems conference, one of the largest AI research gatherings in the world.
+
+Sign up for the The Algorithm
+Artificial intelligence, demystified
+Your email
+Stay updated on MIT Technology Review initiatives and events?YesNo
+Neural nets are the core machinery that make deep learning so powerful. A traditional neural net is made up of stacked layers of simple computational nodes that work together to find patterns in data. The discrete layers are what keep it from effectively modeling continuous processes (we’ll get to that).
+
+In response, the research team's design scraps the layers entirely. (Duvenaud is quick to note that they didn’t come up with this idea. They were just the first to implement it in a generalizable way.) To understand how this is possible, let’s walk through what the layers do in the first place.
+
+ 
+How a traditional neural net transforms an image of a lion into the name "lion".
+JEFF CLUNE/SCREENSHOT
+The most common process for training a neural network (a.k.a. supervised learning) involves feeding it a bunch of labeled data. Let’s say you wanted to build a system that recognizes different animals. You’d feed a neural net animal pictures paired with corresponding animal names. Under the hood, it begins to solve a crazy mathematical puzzle. It looks at all the picture-name pairs and figures out a formula that reliably turns one (the image) into the other (the category). Once it cracks that puzzle, it can reuse the formula again and again to correctly categorize any new animal photo—most of the time.
+
+But finding a single formula to describe the entire picture-to-name transformation would be overly broad and result in a low-accuracy model. It would be like trying to use a single rule to differentiate cats and dogs. You could say dogs have floppy ears. But some dogs don’t and some cats do, so you’d end up with a lot of false negatives and positives.
+
+This is where a neural net’s layers come in. They break up the transformation process into steps and let the network find a series of formulas that each describe a stage of the process. So the first layer might take in all the pixels and use a formula to pick out which ones are most relevant for cats versus dogs. A second layer might use another to construct larger patterns from groups of pixels and figure out whether the image has whiskers or ears. Each subsequent layer would identify increasingly complex features of the animal, until the final layer decides “dog” on the basis of the accumulated calculations. This step-by-step breakdown of the process allows a neural net to build more sophisticated models—which in turn should lead to more accurate predictions.
+
+The layer approach has served the AI field well—but it also has a drawback. If you want to model anything that transforms continuously over time, you also have to chunk it up into discrete steps. In practice, if we returned to the health example, that would mean grouping your medical records into finite periods like years or months. You could see how this would be inexact. If you went to the doctor on January 11 and again on November 16, the data from both visits would be grouped together under the same year.
+
+So the best way to model reality as close as possible is to add more layers to increase the granularity. (Why not break your records up into days or even hours? You could have gone to the doctor twice in one day!) Taken to the extreme, this means the best neural network for this job would have an infinite number of layers to model infinitesimal step-changes. The question is whether this idea is even practical.
+
+If this is starting to sound familiar, that’s because we have arrived at exactly the kind of problem that calculus was invented to solve. Calculus gives you all these nice equations for how to calculate a series of changes across infinitesimal steps—in other words, it saves you from the nightmare of modeling continuous change in discrete units. This is the magic of Duvenaud and his collaborators’ paper: it replaces the layers with calculus equations.
+
+The result is really not even a network anymore; there are no more nodes and connections, just one continuous slab of computation. Nonetheless, sticking with convention, the researchers named this design an “ODE net”—ODE for “ordinary differential equations.” (They still need to work on their branding.)
+
+If your brain hurts (trust me, mine does too), here’s a nice analogy that Duvenaud uses to tie it all together. Consider a continuous musical instrument like a violin, where you can slide your hand along the string to play any frequency you want; now consider a discrete one like a piano, where you have a distinct number of keys to play a limited number of frequencies. A traditional neural network is like a piano: try as you might, you won’t be able to play a slide. You will only be able to approximate the slide by playing a scale. Even if you retuned your piano so the note frequencies were really close together, you would still be approximating the slide with a scale. Switching to an ODE net is like switching your piano to a violin. It’s not necessarily always the right tool, but it is more suitable for certain tasks.
+
+In addition to being able to model continuous change, an ODE net also changes certain aspects of training. With a traditional neural net, you have to specify the number of layers you want in your net at the start of training, then wait until the training is done to find out how accurate the model is. The new method allows you to specify your desired accuracy first, and it will find the most efficient way to train itself within that margin of error. On the flip side, you know from the start how much time it will take a traditional neural net to train. Not so much when using an ODE net. These are the trade-offs that researchers will have to make, explains Duvenaud, when they decide which technique to use in the future.
+
+Currently, the paper offers a proof of concept for the design, “but it’s not ready for prime time yet,” Duvenaud says. Like any initial technique proposed in the field, it still needs to fleshed out, experimented on, and improved until it can be put into production. But the method has the potential to shake up the field—in the same way that Ian Goodfellow did when he published his paper on GANs.
+
+“Many of the key advances in the field of machine learning have come in the area of neural networks,” says Richard Zemel, the research director at the Vector Institute, who was not involved in the paper. “The paper will likely spur a whole range of follow-up work, particularly in time-series models, which are foundational in AI applications such as health care.”
+
+Just remember that when ODE nets blow up, you read about it here first.
+
+Corrections: An earlier version of the article incorrectly captioned the image at the top of the article as an ordinary differential equation. It shows the trajectories of neural ordinary differential equations. The article has also been updated to refer to the new design as an "ODE net" rather than "ODE solver," to avoid confusion with existing ODE solvers from other fields.
+
+__
+
+This article originally appeared in our AI newsletter The Algorithm. To have it delivered directly to your inbox, subscribe here for free.
+
+Keep up with the latest in artificial intelligence at EmTech Digital.
+
+The Countdown has begun.
+March 25-26, 2019
+San Francisco, CA
+
+Register now 
+
+
+
+
+
+
+
+https://www.technologyreview.com/s/613092/a-quantum-experiment-suggests-theres-no-such-thing-as-objective-reality/
+
+Business Impact
+A quantum experiment suggests there’s no such thing as objective reality
+Physicists have long suspected that quantum mechanics allows two observers to experience different, conflicting realities. Now they’ve performed the first experiment that proves it.
+by Emerging Technology from the arXiv  March 12, 2019
+ 
+Back in 1961, the Nobel Prize–winning physicist Eugene Wigner outlined a thought experiment that demonstrated one of the lesser-known paradoxes of quantum mechanics. The experiment shows how the strange nature of the universe allows two observers—say, Wigner and Wigner’s friend—to experience different realities.
+
+Recommended for You
+The mass shooting in New Zealand shows how broken social media is
+IBM’s photo-scraping scandal shows what a weird bubble AI researchers live in
+No, scientists didn’t just “reverse time” with a quantum computer
+A second 737 Max crash raises questions about airplane automation
+The collision of two distant galaxies was caught in this new Hubble image
+Since then, physicists have used the “Wigner’s Friend” thought experiment to explore the nature of measurement and to argue over whether objective facts can exist. That’s important because scientists carry out experiments to establish objective facts. But if they experience different realities, the argument goes, how can they agree on what these facts might be?
+
+That’s provided some entertaining fodder for after-dinner conversation, but Wigner’s thought experiment has never been more than that—just a thought experiment.  
+
+ 
+Last year, however, physicists noticed that recent advances in quantum technologies have made it possible to reproduce the Wigner’s Friend test in a real experiment. In other words, it ought to be possible to create different realities and compare them in the lab to find out whether they can be reconciled.
+
+And today, Massimiliano Proietti at Heriot-Watt University in Edinburgh and a few colleagues say they have performed this experiment for the first time: they have created different realities and compared them. Their conclusion is that Wigner was correct—these realities can be made irreconcilable so that it is impossible to agree on objective facts about an experiment.
+
+Sign up for The Download
+Your daily dose of what's up in emerging technology
+Your email
+Stay updated on MIT Technology Review initiatives and events?YesNo
+Wigner’s original thought experiment is straightforward in principle. It begins with a single polarized photon that, when measured, can have either a horizontal polarization or a vertical polarization. But before the measurement, according to the laws of quantum mechanics, the photon exists in both polarization states at the same time—a so-called superposition.
+
+Wigner imagined a friend in a different lab measuring the state of this photon and storing the result, while Wigner observed from afar. Wigner has no information about his friend’s measurement and so is forced to assume that the photon and the measurement of it are in a superposition of all possible outcomes of the experiment.
+
+Wigner can even perform an experiment to determine whether this superposition exists or not. This is a kind of interference experiment showing that the photon and the measurement are indeed in a superposition.
+
+From Wigner’s point of view, this is a “fact”—the superposition exists. And this fact suggests that a measurement cannot have taken place. 
+
+But this is in stark contrast to the point of view of the friend, who has indeed measured the photon’s polarization and recorded it. The friend can even call Wigner and say the measurement has been done (provided the outcome is not revealed).
+
+So the two realities are at odds with each other. “This calls into question the objective status of the facts established by the two observers,” say Proietti and co.
+
+That’s the theory, but last year Caslav Brukner, at the University of Vienna in Austria, came up with a way to re-create the Wigner’s Friend experiment in the lab by means of techniques involving the entanglement of many particles at the same time.
+
+The breakthrough that Proietti and co have made is to carry this out. “In a state-of-the-art 6-photon experiment, we realize this extended Wigner’s friend scenario,” they say.
+
+They use these six entangled photons to create two alternate realities—one representing Wigner and one representing Wigner’s friend. Wigner’s friend measures the polarization of a photon and stores the result. Wigner then performs an interference measurement to determine if the measurement and the photon are in a superposition.
+
+The experiment produces an unambiguous result. It turns out that both realities can coexist even though they produce irreconcilable outcomes, just as Wigner predicted.  
+
+That raises some fascinating questions that are forcing physicists to reconsider the nature of reality.
+
+The idea that observers can ultimately reconcile their measurements of some kind of fundamental reality is based on several assumptions. The first is that universal facts actually exist and that observers can agree on them.
+
+But there are other assumptions too. One is that observers have the freedom to make whatever observations they want. And another is that the choices one observer makes do not influence the choices other observers make—an assumption that physicists call locality.
+
+If there is an objective reality that everyone can agree on, then these assumptions all hold.
+
+But Proietti and co’s result suggests that objective reality does not exist. In other words, the experiment suggests that one or more of the assumptions—the idea that there is a reality we can agree on, the idea that we have freedom of choice, or the idea of locality—must be wrong.
+
+Of course, there is another way out for those hanging on to the conventional view of reality. This is that there is some other loophole that the experimenters have overlooked. Indeed, physicists have tried to close loopholes in similar experiments for years, although they concede that it may never be possible to close them all.
+
+Nevertheless, the work has important implications for the work of scientists. “The scientific method relies on facts, established through repeated measurements and agreed upon universally, independently of who observed them,” say Proietti and co. And yet in the same paper, they undermine this idea, perhaps fatally.
+
+The next step is to go further: to construct experiments creating increasingly bizarre alternate realities that cannot be reconciled. Where this will take us is anybody’s guess. But Wigner, and his friend, would surely not be surprised.
+
+Ref: arxiv.org/abs/1902.05080 : Experimental Rejection of Observer-Independence in the Quantum World
+
+
+
+
+https://sloanreview.mit.edu/article/the-machine-learning-race-is-really-a-data-race/?fbclid=IwAR0t3WbJ15QQyZxVEC-1-wpk3oJ_4E0GbZGfYbyEsg28qoFDJoyDZkgMS14
+
+The Machine Learning Race Is Really a Data Race
+Blog    December 14, 2018  Reading Time: 6 min 
+Megan Beck and Barry Libert
+Data & Analytics, Strategy, Analytics & Strategy, Digital Business, Technology Implementation
+SUBSCRIBE
+SHARE
+Share on Twitter Share on Facebook Share on LinkedIn Share through Email
+Organizations that hope to make AI a differentiator need to draw from alternative data sets — ones they may have to create themselves.
+
+advertisement
+ Rowing crew of business people race through a sea of data in a four person row boat
+Machine learning — or artificial intelligence, if you prefer — is already becoming a commodity. Companies racing to simultaneously define and implement machine learning are finding, to their surprise, that implementing the algorithms used to make machines intelligent about a data set or problem is the easy part. There is a robust cohort of plug-and-play solutions to painlessly accomplish the heavy programmatic lifting, from the open-source machine learning framework of Google’s TensorFlow to Microsoft’s Azure Machine Learning and Amazon’s SageMaker.
+
+What’s not becoming commoditized, though, is data. Instead, data is emerging as the key differentiator in the machine learning race. This is because good data is uncommon.
+
+Useful Data: Both Valuable and Rare
+Data is becoming a differentiator because many companies don’t have the data they need. Although companies have measured themselves in systematic ways using generally accepted accounting principles for decades, this measurement has long been focused on physical and financial assets — things and money. A Nobel Prize was even awarded on capital asset pricing in 2013, reinforcing these well-established priorities.
+
+But today’s most valuable companies trade in software and networks, not just physical goods and capital assets. Over the past 40 years, the asset focus has completely flipped, from the market being dominated by 83% tangible assets in 1975 to 84% intangible assets in 2015. Instead of manufacturing coffeepots and selling washing machines, today’s corporate giants offer apps and connect people. This shift has created a drastic mismatch between what we measure and what actually drives value.
+
+EMAIL UPDATES ON AI, DATA & MACHINE LEARNING
+
+Get monthly email updates on how artificial intelligence and big data are affecting the development and execution of strategy in organizations.
+
+Enter your email address
+  SIGN UP
+Privacy Policy
+
+The result is that useful data is problematically rare. There is a growing gap between market and book values. Because of this gap, companies are racing to apply machine learning to important business decisions, even replacing some of their expensive consultants, only to realize that the data they need doesn’t even exist yet. In essence, the fancy new AI systems are being asked to apply new techniques to the same old material.
+
+Just like people, a machine learning system is not going to be smart about any topic until it has been taught. Machines need a lot more data than humans do in order to get smart — although, granted, they do read that data a lot faster. So, while there is a visible arms race as companies bring on machine learning coders and kick off AI initiatives, there is also a behind-the-scenes, panicked race for new and different data.
+
+In finance, for instance, alternative data reaches beyond the traditional Securities and Exchange Commission reports and investor presentations that influence investment decisions. Alternative data, such as social media sentiment or number of patents awarded, is essential for two important reasons. First, traditional data focuses on traditional assets, and that isn’t expansive enough in the age of intangible assets. Second, there’s no reason to bother using machine learning to study the same data sets that everyone else in the market is analyzing. Everyone who is interested has already tried to correlate industry trends, profit margins, growth rates, earnings before interest and taxes, asset turnover, and return on assets — along with the more than 1,000 other commonly reported variables with shareholder return.
+
+Looking for connections among the same sets of material that everyone else has isn’t going to help companies win. Instead, organizations that want to use AI as a differentiator are going to have to find relationships between new data sets — data sets they may have to create themselves to measure intangible assets.
+
+advertisement
+
+Curate Carefully: What Do You Want to Know?
+Data creation is more complex than simply aggregating point-of-sale or customer information and dumping it into a database: Most organizations mistakenly believe that an expedient path involves gathering every scrap of possible data and painstakingly combing through it all hoping to find a glimmer of insight — the elusive feature that predicts or categorizes something they care about.
+
+While machine learning can occasionally surprise us with a flash of rare brilliance that no one has yet to discover, the technology isn’t capable of providing these insights with consistency. This doesn’t mean the tool is broken. It means we have to apply it wisely. This is easier said than done: For instance, in our research of the alternative data market, we found that more than half of new data providers are still focused on measuring physical and financial assets.
+
+The step that many organizations omit is creating a hypothesis about what matters. Where machine learning really excels is taking an insight that humans have — one based on rules of thumb, broad perceptions, or poorly understood relationships — and developing a faster, better understood, more scalable (and less error-prone) method for applying the insight.
+
+In order to use machine learning in this way, you don’t feed the system every known data point in any related field. You feed it a carefully curated set of knowledge, hoping it can learn, and perhaps extend, at the margins, knowledge that people already have.
+
+Insightful Machine Learning Comes From Different Data
+All this has three specific implications for companies wanting to create impactful and valuable machine learning applications:
+
+Differentiated data is key to a successful AI play. You won’t uncover anything new working with the same data your competitors have. Look internally and identify what your organization uniquely knows and understands, and create a distinctive data set using those insights. Machine learning applications do require a large number of data points, but this doesn’t mean the model has to consider a wide range of features. Focus your data efforts where your organization is already differentiated.
+Meaningful data is better than comprehensive data. You may possess rich, detailed data on a topic that simply isn’t very useful. If your company wouldn’t use that information to help inform decision-making on an ad hoc basis, then that data likely won’t be valuable from a machine learning perspective. An expert machine learning architect will ask you tough questions about which fields really matter, and how those fields will likely matter to your application of the insights you get. If these questions are difficult to answer, then you haven’t put in the thought needed to produce practical value.
+What you know should be the starting point. Companies that best use machine learning begin with a unique insight about what matters most to them for making important decisions. This guides them about what data to amass, as well as what technologies to use. An easy place to begin is to scale and grow a piece of knowledge that your team already has and that could create more value for the organization.
+Read Related Articles
+Sponsor’s Content | The Dawn of the Intelligent Enterprise: Artificial Intelligence and Machine Learning Power the New Workforce
+Machine Learning in the Travel Industry: The Data-Driven Marketers’ Ticket to Success
+Improving Strategic Execution With Machine Learning
+It’s clear that software has eaten the world (a phrase coined by software entrepreneur Marc Andreessen). But it is still hungry! Software needs a steady diet of new data combined with new technologies to continue adding value.
+
+You don’t want to be left behind by this shift in insights, machines, and alternative data. Start looking internally to identify your unique perspective and the valuable, alternative data you could and should produce. It’s from those steps that you’ll discover the related insights to keep your organization competitive.
+
+advertisement
+
+ABOUT THE AUTHORS
+Megan Beck (@themeganbeck) is cofounder and chief product officer of OpenMatters, a machine learning company. Barry Libert (@barrylibert) is CEO of OpenMatters and a senior fellow at Wharton’s SEI Center.
+
+TAGS: Artificial Intelligence, Data Management, Data Strategy, Machine Learning
+REPRINT #: W63499
+
+
+
+
+
+https://www.microsoft.com/en-us/research/blog/towards-universal-language-embeddings/?OCID=msr_blog_univlang_fb
+Microsoft Research Blog
+The Microsoft Research blog provides in-depth views and perspectives from our researchers, scientists and engineers, plus information about noteworthy events and conferences, scholarships, and fellowships designed for academic and scientific communities.
+
+Blog   Natural language processing  Towards universal language embeddings
+Towards universal language embeddings
+March 18, 2019 | By Jianfeng Gao, Partner Research Manager
+
+Share on Twitter 
+Share on Facebook
+ 
+Share on LinkedIn 
+Share on Reddit 
+Subscribe to our RSS feed
+ 
+
+Language embedding is a process of mapping symbolic natural language text (for example, words, phrases and sentences) to semantic vector representations. This is fundamental to deep learning approaches to natural language understanding (NLU). It is highly desirable to learn language embeddings that are universal to many NLU tasks.
+
+Two popular approaches to learning language embeddings are language model pre-training and multi-task learning (MTL). While the former learns universal language embeddings by leveraging large amounts of unlabeled data, MTL is effective to leverage supervised data from many related tasks and profits from a regularization effect via alleviating overfitting to a specific task, thus making the learned embeddings universal across tasks.
+
+Researchers at Microsoft have released MT-DNN—a Multi-Task Deep Neural Network model for learning universal language embeddings. MT-DNN combines the strengths of MTL and language model pretraining of BERT, and outperforms BERT on 10 NLU tasks, creating new state-of-the-art results across many popular NLU benchmarks, including General Language Understanding Evaluation (GLUE), Stanford Natural Language Inference (SNLI) and SciTail.
+
+MT-DNN architecture
+MT-DNN extends the model proposed by Microsoft in 2015 by incorporating a pre-trained bidirectional transformer language model, known as BERT, developed by Google AI. The architecture of the MT-DNN model is illustrated in the following figure. The lower layers are shared across all tasks while the top layers are task-speciﬁc. The input X, either a sentence or a pair of sentences, is ﬁrst represented as a sequence of embedding vectors, one for each word, in l_1. Then the transformer-based encoder captures the contextual information for each word and generates the shared contextual embedding vectors in l_2. Finally, for each task, additional task-speciﬁc layers generate task-speciﬁc representations, followed by operations necessary for classiﬁcation, similarity scoring, or relevance ranking. MT-DNN initializes its shared layers using BERT, then refines them via MTL.
+
+
+MT-DNN architecture
+
+Domain Adaptation Results
+One way to evaluate how universal the language embeddings are is to measure how fast the embeddings can be adapted to a new task, or how many task-specific labels are needed to get a reasonably good result on the new task. More universal embeddings require fewer task-specific labels.
+The authors of the MT-DNN paper compared MT-DNN with BERT in domain adaption, where both models are adapted to a new task by gradually increasing the size of in-domain data for adaptation. The results on the SNLI and SciTail tasks are presented in the following table and figure. With only 0.1% of in-domain data (which amounts to 549 samples in SNLI and 23 samples in SciTail), MT-DNN achieves +80% in accuracy while BERT’s accuracy is around 50%, demonstrating that the language embeddings learned by MT-DNN are substantially more universal than those of BERT.
+
+
+MT-DNN accuracy as compares with BERT across SNLI and SciTail datasets.
+
+Release news
+Microsoft will release the MT-DNN package to public at https://github.com/namisan/mt-dnn. The release package contains the pretrained models, the source code and the Readme that describes step by step how to reproduce the results reported in the MT-DNN paper, and how to adapt the pre-trained MT-DNN models to any new tasks via domain adaptation. We welcome your comments and feedback and look forward to future developments!
+
+
+
+
+
+https://www.microsoft.com/en-us/research/blog/democratizing-apis-with-natural-language-interfaces/
+Microsoft Research Blog
+The Microsoft Research blog provides in-depth views and perspectives from our researchers, scientists and engineers, plus information about noteworthy events and conferences, scholarships, and fellowships designed for academic and scientific communities.
+
+Blog   Artificial intelligence  Democratizing APIs with Natural Language Interfaces
+Democratizing APIs with Natural Language Interfaces
+July 2, 2018 | By Ahmed Hassan Awadallah, Senior Researcher, Research Manager; Ryen W. White, Partner Researcher, Research Manager
+
+Share on Twitter 
+Share on Facebook
+ 
+Share on LinkedIn 
+Share on Reddit 
+Subscribe to our RSS feed
+Benefiting from a confluence of factors, such as service-oriented architecture, cloud computing, and Internet-of-Things (IoT), application program interfaces – APIs – are playing an increasingly important role in both the virtual and the physical world. For example, web services, such as those featuring weather, sports, and finance, hosted in the cloud provide data and services to end users via web APIs and IoT devices expose their functionalities via APIs to other devices on the network.
+
+Traditionally, APIs are mainly consumed by various kinds of software – desktop applications, websites, and mobile apps – that then serve users via graphical user interfaces (GUIs). GUIs have greatly contributed to the popularization of computing, but many limitations have gradually presented themselves as the computing landscape evolves. As computing devices become smaller, more mobile and more intelligent, the requirement of a screen for GUIs becomes a burden in many cases, such as in wearables and IoT devices. Users must also adapt to different ad-hoc GUIs to use different services and devices. As the number of available services and devices rapidly increases, the learning and adaptation cost on users increases. Natural language interfaces – NLIs – show significant promise as a unified and intelligent gateway to a wide range of back-end services and devices. NLIs have enormous potential to help capture user intent and contextual information to enable applications such as virtual assistants to better serve their users.
+
+We have been studying natural language interfaces to APIs (NL2APIs). Different from general-purpose NLIs like virtual assistants, we examined how to build NLIs for individual web APIs, for example, the API to a calendar service. Such NL2APIs have the potential to democratize APIs by helping users communicate with software systems. They can also address the scalability issue of general-purpose virtual assistants by allowing for distributed development. The usefulness of a virtual assistant is largely determined by its breadth, that is, the number of services it supports. However, it is tedious for a virtual assistant to integrate web services one by one. If there was a simple way for individual web service providers to build an NLI to their respective APIs, integration costs could be greatly reduced. A virtual assistant then need not handle the heterogeneous interfaces to different web services; rather, it would only need to integrate the individual NL2APIs which enjoy the uniformity of natural language. NL2APIs can also facilitate web service discovery, recommendation and help API programming by reducing the burden to memorize the available web APIs and their syntax.
+
+
+Figure 1: Methods for building a natural language interface to API. Left: Traditional methods train language understanding models to map natural language to intents, other models to extract slots related to each intent and then map those into API calls manually. Right: Our approach can directly translate natural language to API calls.
+
+The core task of NL2API is to map natural language utterances given by users into API calls. More specifically, we focus on web APIs that follow the REST architectural style, that is, RESTful APIs. RESTful APIs are widely used for web services, IoT devices, as well as smartphone apps. An example from the Microsoft Graph APIs is shown in Figure 1. The left portion of the figure shows the traditional way of building natural language where we train language understanding models to map natural language to intents, train other models to extract slots related to each intent and then map those into API calls manually by writing code. Alternatively (as shown on the right portion of the figure), we can learn to map natural language utterances directly to API calls. In our research, we apply our framework to APIs from the Microsoft Graph API suite. The Microsoft Graph APIs enable developers to connect to the data that drives productivity – mail, calendar, contacts, documents, directory, devices and more.
+
+
+Figure 2: The Microsoft Graph APIs enable developers to connect to the data that drives productivity – mail, calendar, contacts, documents, directory, devices, and more.
+
+One of the requirements in developing our model is the ability to support fine-grained user interaction. Most existing NLIs provide users with little help in case of incorrect interpretation of user commands. We hypothesize that the support of fine-grained user interaction can greatly improve the usability of NLIs.
+
+We developed a modular sequence-to-sequence model (see Figure 3) to enable fine-grained interaction of NLIs. To achieve that, we use a sequence-to-sequence architecture but decompose the decoder into multiple interpretable components called modules. Each module specializes in predicting a pre-defined kind of output, for example, instantiating a specific parameter by reading the input utterance in NL2API. After some simple mapping, users can easily understand the prediction of any module and interact with the system at the module level. Each module in our model generates a sequential output instead of a continuous state.
+
+
+Figure 3: Modular sequence-to-sequence model. The controller triggers a few modules, each of which instantiates a parameter.
+
+Modules: We first define modules. A module is a specialized neural network that is designed to fulfill a specific sequence prediction task. In NL2API, different modules correspond to different parameters. For example, for the GET-Messages API the modules are FILTER(sender), FILTER(isRead), SELECT(attachments), ORDERBY(receivedDateTime), SEARCH, and so on. The task of a module, if triggered, is to read the input utterance and instantiate a full parameter. To do that, a module needs to determine its parameter values based on the input utterance. For example, given an input utterance “unread emails about PhD study,” the SEARCH module needs to predict that the value of the SEARCH parameter is “PhD study,” and generate the full parameter, “SEARCH PhD study,” as its output sequence. Similarly, the FILTER(isRead) module needs to learn that phrases such as “unread emails”, “emails that have not been read” and “emails not read yet” all indicate its parameter value is False. It is natural to implement the modules as attentive decoders, as in the original sequence-to-sequence model. However, instead of a single decoder for everything, now we have multiple decoders, each of which is specialized in predicting specific parameters. Moreover, because each module has clearly defined semantics, it becomes straightforward to enable user interaction at the module level.
+
+Controller: For any input utterance, only a few modules will be triggered. It is the job of the controller to determine which modules to trigger. Specifically, the controller is also implemented as an attentive decoder. Using the encoding of the utterance as input, it generates a sequence of modules, called the layout. The modules then generate their respective parameters and finally the parameters are composed to form the final API call.
+
+By decomposing the complex prediction process of a typical sequence-to-sequence model into small, highly-specialized prediction units called modules, the model prediction can be easily explained to users and user feedback can be solicited to correct possible prediction errors at a granular level. In our research, we test our hypothesis by comparing an interactive NLI with its non-interactive version through both simulation and human subject experiments with real-world APIs. We show that with interactive NLIs, users can achieve a higher success rate and a lower task completion time, which lead to greatly improved user satisfaction.
+
+For more details, we encourage you to read our paper, Natural Language Interfaces with Fine-Grained User Interaction: A Case Study on Web APIs to be presented at SIGIR 2018 in Ann Arbor, Michigan.
+
+Related Articles:
+Building Natural Language Interfaces to Web APIs
+
+

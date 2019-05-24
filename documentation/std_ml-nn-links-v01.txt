@@ -1,0 +1,331 @@
+
+Quote:
+"""
+Machines need a lot more data than humans do in order to get smart — although, granted, they do read that data a lot faster.
+
+
+Where machine learning really excels is taking an insight that humans have — one based on rules of thumb, broad perceptions, or poorly understood relationships — and developing a faster, better understood, more scalable (and less error-prone) method for applying the insight.
+
+In order to use machine learning in this way, you don’t feed the system every known data point in any related field. You feed it a carefully curated set of knowledge, hoping it can learn, and perhaps extend, at the margins, knowledge that people already have.
+
+https://sloanreview.mit.edu/article/the-machine-learning-race-is-really-a-data-race/?fbclid=IwAR0t3WbJ15QQyZxVEC-1-wpk3oJ_4E0GbZGfYbyEsg28qoFDJoyDZkgMS14
+"""
+
+
+
+Capsule networks:
+    https://en.wikipedia.org/wiki/Capsule_neural_network
+    
+Best Online Data Science Courses
+    https://www.youtube.com/watch?v=MGnXMu9GFig
+    
+Is this the BEST BOOK on Machine Learning? Hands On Machine Learning Review
+    https://www.youtube.com/watch?v=1RiFIYwuwHM
+    
+A radical new neural network design could overcome big challenges in AI
+    https://www.technologyreview.com/s/612561/a-radical-new-neural-network-design-could-overcome-big-challenges-in-ai/
+    
+A quantum experiment suggests there’s no such thing as objective reality
+    https://www.technologyreview.com/s/613092/a-quantum-experiment-suggests-theres-no-such-thing-as-objective-reality/
+    
+TensorFlow Tutorials
+    https://www.youtube.com/playlist?list=PL9Hr9sNUjfsmEu1ZniY0XpHSzl5uihcXZ
+TensorFlow Tutorials with YouTube Videos
+    https://github.com/Hvass-Labs/TensorFlow-Tutorials
+    
+    
+Hands-On Geospatial Analysis with R and QGIS | PACKT Books
+    https://www.packtpub.com/application-development/hands-geospatial-analysis-r-and-qgis?fo_c=2206&fo_k=f92f03f3bd1868fd0bdbfc1a5989e3a1&fo_s=criteoeu&utm_source=Criteo&utm_medium=cpc&utm_campaign=criteo_retargeting_low_0-30days
+    
+
+
+Machine Learning with R | Arpan Gupta | Data Scientist & IITian    
+https://www.youtube.com/playlist?list=PLbNJQ-D5RH18dM0soIXl7AT_6ZuNLVaGe&fbclid=IwAR3qEO1W1aAp__AvHkCxi3A9VhY_CDoJIAkJMIW1cCDwUM15fvDRHjwvOrQ
+
+Machine Learning with R | Arpan Gupta | Data 
+Types of Machine Learning Techniques
+    https://www.youtube.com/watch?v=JHATfQNFamc&index=3&list=PLbNJQ-D5RH18dM0soIXl7AT_6ZuNLVaGe&t=0s
+Histogram for one numerical variable using ggplot2 in R
+    https://www.youtube.com/watch?v=HvVY6BVNWU8&index=13&list=PLbNJQ-D5RH18dM0soIXl7AT_6ZuNLVaGe&t=0s
+    
+
+Neuron model RF-PSTH (which simulates Receptive Field (RF) structure and PSTH output signal of the neuron) 
+    http://neuroclusterbrain.com/neuron_model.html?fbclid=IwAR2yw4cFHmj-siojAVXoawecN73VZ9CijJNTjYNmiK6jmnBL6h91HPe3OXI
+    
+Stanford Machine Learning
+    http://www.holehouse.org/mlclass/?fbclid=IwAR0W0DOBbrvm72adIXN_bUlpEZ3Dodin84Z5bkdyjvoraTve98u_-KkMlHM
+    http://www.holehouse.org/mlclass/06_Logistic_Regression.html
+    
+
+[COURSES]
+
+Machine learning course     
+https://www.coursera.org/learn/machine-learning
+
+CMU CS 11-747, Spring 2019
+Neural Networks
+for NLP
+
+https://twitter.com/gneubig/status/1084900604672135168
+
+http://phontron.com/class/nn4nlp2019/
+http://phontron.com/class/nn4nlp2019/index.html
+http://phontron.com/class/nn4nlp2019/schedule.html
+http://phontron.com/class/nn4nlp2019/schedule/class-introduction.html
+http://phontron.com/class/nn4nlp2019/schedule/posters.html
+http://phontron.com/class/nn4nlp2019/schedule/efficiency-tricks.html
+http://phontron.com/class/nn4nlp2019/assignments.html
+http://phontron.com/class/nn4nlp2019/description.html
+http://phontron.com/class/nn4nlp2019/schedule/word-vectors.html
+
+
+https://twitter.com/MikeTamir/status/1107482763551232000
+https://towardsdatascience.com/qrash-course-deep-q-networks-from-the-ground-up-1bbda41d3677
+
+
+Home » Courses » Electrical Engineering and Computer Science » Introduction to Computational Thinking and Data Science » Lecture Videos
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/lecture-videos/index.htm
+
+    6. Monte Carlo Simulation
+    https://www.youtube.com/watch?v=OgO1gpXSUzU
+    
+    A Random Walk & Monte Carlo Simulation || Python Tutorial || Learn Python Programming
+    https://www.youtube.com/watch?v=BfS2H1y6tzQ
+        
+
+I wish I had found this FREE PYTHON resource much EARLIER!
+    https://www.youtube.com/watch?v=EXCM5ipHJ0A
+    https://lectures.quantecon.org/py/amss2.html
+    
+    
+!!!
+But what *is* a Neural Network? | Deep learning, chapter 1
+    https://www.youtube.com/watch?v=aircAruvnKk&t=12s
+    3BLUE1BROWN SERIES  S3 • E1
+    
+R Programming For Beginners | R Language Tutorial | R Tutorial For Beginners | Edureka
+    https://www.youtube.com/watch?v=fDRa82lxzaU
+
+
+Stanford CS224N: NLP with Deep Learning | Winter 2019 | Lecture 1 – Introduction and Word Vectors
+    https://www.youtube.com/watch?v=8rXD5-xhemo&list=PLoROMvodv4rOhcuXMZkNm7j3fVwBBY42z
+    https://www.youtube.com/watch?v=8rXD5-xhemo
+    http://web.stanford.edu/class/cs224n/index.html#schedule
+    http://web.stanford.edu/class/cs224n/index.html#schedule
+
+
+
+
+BOOKS:
+
+Neural Network Methods for Natural Language Processing
+Yoav Goldberg
+Synthesis Lectures on Human Language Technologies, April 2017, Vol. 10, No. 1 , Pages 1-309
+(https://doi.org/10.2200/S00762ED1V01Y201703HLT037)
+https://www.morganclaypool.com/doi/pdf/10.2200/S00762ED1V01Y201703HLT037
+https://www.morganclaypool.com/doi/abs/10.2200/S00762ED1V01Y201703HLT037
+
+
+The Machine Learning Race Is Really a Data Race
+Blog    December 14, 2018  Reading Time: 6 min 
+Megan Beck and Barry Libert
+https://sloanreview.mit.edu/article/the-machine-learning-race-is-really-a-data-race/?fbclid=IwAR0t3WbJ15QQyZxVEC-1-wpk3oJ_4E0GbZGfYbyEsg28qoFDJoyDZkgMS14
+
+Artificial Intelligence Podcast
+    https://lexfridman.com/ai/
+    
+    https://lexfridman.com/
+
+MIT Deep Learning
+    https://deeplearning.mit.edu/
+    
+    
+Giant Language model Test Room
+    https://twitter.com/harvardnlp/status/1103365098960232449
+    http://gltr.io/dist/index.html
+    
+    
+Annotation tools:
+The Text Annotation Tool to Train AI
+    https://www.tagtog.net/#
+
+    
+    
+The ARIEL-CMU Systems for LoReHLT18
+    https://twitter.com/loretoparisi/status/1100687801014718465
+    https://arxiv.org/abs/1902.08899
+    
+COW
+Free state-of-the-art web corpora, frequency lists, and link data
+    https://corporafromtheweb.org/encow16/
+    http://cistern.cis.lmu.de/marmot/models/CURRENT/
+    
+    
+    
+Language embeddings -- Microsoft:
+    https://www.microsoft.com/en-us/research/blog/towards-universal-language-embeddings/?OCID=msr_blog_univlang_fb
+    https://www.microsoft.com/en-us/research/blog/democratizing-apis-with-natural-language-interfaces/
+    
+    
+    
+[Videos]
+Generative Adversarial Networks (GANs) - Computerphile
+    https://www.youtube.com/watch?v=Sw9r8CL98N0
+    
+    
+AI? Just Sandbox it... - Computerphile
+    https://www.youtube.com/watch?v=i8r_yShOixM
+    
+Concrete Problems in AI Safety (Paper) - Computerphile  
+    https://www.youtube.com/watch?v=AjyM-f8rDpg
+
+   
+Learn NUMPY in 5 minutes - BEST Python Library!
+    https://www.youtube.com/watch?v=xECXZ3tyONo
+    
+This is the BEST course on CALCULUS that I have seen. Insight and Intuition included.
+    https://www.youtube.com/watch?v=1zGTERnxq1o
+    https://www.youtube.com/playlist?list=PLKc2XOQp0dMwj9zAXD5LlWpriIXIrGaNb
+    https://www.youtube.com/channel/UC5N5pRddyicAX1QJyJjIIdg
+    
+    
+AI YouTube Comments - Computerphile
+    https://www.youtube.com/watch?v=XyMdpcAPnZc
+    NLG -- generating comments RNN::
+
+
+Inside a Neural Network - Computerphile
+    https://www.youtube.com/watch?v=BFdMrDOx_CM
+    RNN ::
+    
+5. Random Walks --> MIT
+    https://www.youtube.com/watch?v=6wUD_gp5WeE
+    
+    
+Lec 1 | MIT 18.03 Differential Equations, Spring 2006
+    https://www.youtube.com/watch?v=XDhJ8lVGbl8
+
+
+Mathematics For Machine Learning || Full Course || Principal Component Analysis
+    https://www.youtube.com/watch?v=VEqc7O_dB5w&list=PLRV7dMCYe2NSWZchOnERjshB4lTYt7p_B
+    
+
+Mathematics for Machine Learning Full Course || Multivariate Calculus || Part -2
+    https://www.youtube.com/watch?v=m998PdOCFcY
+Mathematics for Machine Learning Full Course || Multivariate Calculus || Part -2
+    https://www.youtube.com/watch?v=m998PdOCFcY
+    
+Geek's Lesson
+    https://www.youtube.com/channel/UCKXx22vOENUyHrVAADq7Z_g
+    !!!! Geek's Lesson
+    https://www.youtube.com/channel/UCKXx22vOENUyHrVAADq7Z_g
+
+This Canadian Genius Created Modern AI
+    https://www.youtube.com/watch?v=l9RWTMNnvi4
+    
+    
+Hinton 2016 course
+    https://www.youtube.com/watch?v=2fRnHVVLf1Y&list=PLiPvV5TNogxKKwvKb1RKwkq2hm7ZvpHz0
+    
+
+
+Geoffrey Hinton: "Introduction to Deep Learning & Deep Belief Nets"
+    https://www.youtube.com/watch?v=GJdWESd543Y
+    
+    
+
+
+Mathematics
+Mathematics for Machine Learning Full Course || Multivariate Calculus || Part -2
+        
+
+
+
+
+
+[Business]
+
+Lecture 1: Introduction to iOS 11, Xcode 9 and Swift 4
+    https://www.youtube.com/watch?v=71pyOB4TPRE
+    
+Watch Me Build an AI Startup
+    https://www.youtube.com/watch?v=NzmoPqte4V4    
+    
+NodeJS - Setting up a Web Server - Tutorial 1
+    https://www.youtube.com/watch?v=2QA2tjtXd30
+    
+All Apple Keynotes
+    https://www.youtube.com/watch?v=Onj8Mbc_-NA&list=PLhQslKyXu5x5f-TX342fQmvJ85vluhl3k
+    
+
+    
+MT
+    https://arxiv.org/abs/1903.07926
+    compare-mt: A Tool for Holistic Comparison of Language Generation Systems
+
+    Graham Neubig, Zi-Yi Dou, Junjie Hu, Paul Michel, Danish Pruthi, Xinyi Wang
+    (Submitted on 19 Mar 2019)
+Introducing TensorFlow 2.0 and its high-level APIs (TF Dev Summit '19)
+    https://www.youtube.com/watch?v=k5c-vg4rjBw
+    
+Wheeler -- it from bit:
+    fundamental quantity in the Universe is information...
+    
+
+MIT Deep Learning Basics: Introduction and Overview
+    https://www.youtube.com/watch?v=O5xeyoRL95U
+    
+    
+language modelling:
+Understanding LSTM Networks
+Posted on August 27, 2015
+    http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+Recurrent Neural Networks: The Powerhouse of Language Modeling
+    https://towardsdatascience.com/recurrent-neural-networks-the-powerhouse-of-language-modeling-d45acc50444f
+    
+
+
+[Moses]
+http://www.statmt.org/moses/?n=FactoredTraining.BuildingLanguageModel
+
+
+
+Semantic Representation
+    https://www.researchgate.net/publication/332034222_Learning_semantic_sentence_representations_from_visually_grounded_language_without_lexical_knowledge
+
+
+Course on AZURE
+https://docs.microsoft.com/en-gb/learn/modules/replace-faces-with-emojis-matching-emotion/index?ocid=mkto_eml_em510383a1la1&mkt_tok=eyJpIjoiTnpnellUWmpNakZpTWpjMCIsInQiOiJxbHdhclhaQ3l1czBYTUl2YlFRdDlmWVdlWCs4UjM1aEM0QTF3cW0rTWlcL3A4N3BtODNFRlMyenBcL25iS3YreDQ4WnpvTlV5c0xXRExFXC9FeVBYS05XQ29QUm5aTEpIQXlOTGJEU0NmbWNJczlnQnhWaWF5RlBNMWl0UU0xT1BXXC83dHFxZCtpOCtRM1UxVDJOTTl3blwvdz09In0%3D
+
+https://azure.microsoft.com/en-us/develop/python/
+
+
+
+
+[Packages]
+Facebook open-sources deep learning framework Pythia for image and language models
+facebookresearch/pythia
+https://venturebeat.com/2019/05/21/facebook-open-sources-deep-learning-framework-pythia-for-image-and-language-models/?fbclid=IwAR2hiUL2ueIsCVyw5ELtg612QqQEuQulNG3lZCUzDKaG9LvNgDJZQZPwt8s
+https://github.com/facebookresearch/pythia
+
+
+Microsoft open-sources key Bing Search search algorithm
+https://venturebeat.com/2019/05/15/microsoft-open-sources-key-bing-search-search-algorithm/
+microsoft/SPTAG
+https://www.microsoft.com/en-us/ai/ai-lab-application-samples?activetab=pivot1:primaryr7
+
+
+    
+NLTK Python Tutorial (Natural Language Toolkit)
+https://data-flair.training/blogs/nltk-python-tutorial/?fbclid=IwAR23OYSSufRFhIoPqnQ5Yx1DPHyVIBJhXhJBvfzGdWx1WEheC9VfF2ZK6Dw
+
+    
+Tensorflow:
+Transformer - 
+Transformer model for language understanding
+https://www.tensorflow.org/alpha/tutorials/text/transformer
+
+    >> https://arxiv.org/abs/1706.03762
+    >> Attention Is All You Need - paper
+    
+    
